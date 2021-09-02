@@ -1,23 +1,28 @@
-import React from "react";
-import { css } from "@emotion/css";
+import React, { useCallback } from "react";
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 import NavList from "layout/Header/NavList";
-import { CssProp } from "type";
 import Logo from "assets/images/logo.svg";
-
-class CSSMaker {
-  static readonly masterHeader = (props?: CssProp) => css``;
-}
-
-const { masterHeader } = CSSMaker;
+import { useState } from "react";
+import HeaderCSS from "./css";
 
 function Header() {
+  const [testState, setTestState] = useState(true);
+
+  //@ css part
+  const wrapper = useCallback(HeaderCSS, []);
+  const { masterHeader, testContainer } = wrapper();
+  const TestContainer = classNames(testContainer(), testState && "test");
+  //@ /////
+
   return (
     <header className={masterHeader()}>
       <nav>
         <Link to="/" className="logo">
           <img src={Logo} alt="" />
         </Link>
+
+        <div className={TestContainer}>hello it is test</div>
 
         <NavList />
       </nav>
