@@ -13,11 +13,9 @@ const { masterHeader } = CSSMaker;
 function Header() {
   return (
     <header className={masterHeader()}>
-      <div className="container">
-        <nav>
-          <NavList />
-        </nav>
-      </div>
+      <nav>
+        <NavList />
+      </nav>
     </header>
   );
 }
