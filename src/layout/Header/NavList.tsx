@@ -5,22 +5,22 @@ function NavList() {
   return (
     <ul className="nav-list">
       <li className="nav-item">
-        <Link to="/">Home</Link>
+        <Link to="/download">Download</Link>
       </li>
 
       <li className="nav-item">
-        <Link to="/menu">Menu</Link>
+        <Link to="/why">Why Discord</Link>
       </li>
 
       <li className="nav-item">
-        <Link to="/reservations">Reservations</Link>
+        <Link to="/nitro">Nitro</Link>
       </li>
       <li className="nav-item">
-        <Link to="/news">news</Link>
+        <Link to="/safety">Safety</Link>
       </li>
 
       <li className="nav-item">
-        <Link to="/shop">shop</Link>
+        <Link to="/support">Support</Link>
       </li>
 
       <li className="nav-item">
