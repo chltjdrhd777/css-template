@@ -7,12 +7,13 @@ import { useState } from "react";
 import HeaderCSS from "./css";
 
 function Header() {
-  const [testState, setTestState] = useState(true);
+  const [testState, setTestState] = useState({ test: true });
 
   //@ css part
   const wrapper = useCallback(HeaderCSS, []);
   const { masterHeader, testContainer } = wrapper();
-  const TestContainer = classNames(testContainer(), testState && "test");
+  //const TestContainer = classNames(testContainer(), testState && "test");
+  const TestContainer = classNames(testContainer(testState));
   //@ /////
 
   return (

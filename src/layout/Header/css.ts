@@ -1,5 +1,5 @@
 import { CssProp } from "type";
-import { css } from "@emotion/css";
+import { css } from "@emotion/css/macro";
 
 const cssFrame = () => {
   const masterHeader = (props?: CssProp) => css`
@@ -12,7 +12,7 @@ const cssFrame = () => {
     }
   `;
   const testContainer = (props?: CssProp) => css`
-    background-color: pink;
+    background-color: ${props?.test ? "green" : "yellow"};
   `;
 
   return {
