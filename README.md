@@ -4,6 +4,14 @@
 >
 > 이에 따른 불필요한 랜더링을 최소할 수 있겠는가 하는 연구에서 비롯된 테스트버전입니다(copyright@devAnderson)
 
+---
+
+v1.0.0 : useCallback을 이용한 불필요한 css 함수의 컴파일 시점 재평가 방지 도입
+
+v1.0.1 : 조건부 css를 사용할 때에 논리연산자를 활용할 경우, 코드는 줄어들지만 불필요한 false className을 리턴하는 것을 방지하기 위해 classNames를 도입해봄
+
+v1.0.2 : 테스트 결과, css함수의 인자에 조건부로 사용할 인자를 넣어주면 굳이 classNames를 쓸 필요는 없다는 판단, classNames 부분은 주석처리함
+
 - the point to look
 
 해당 프로젝트가 타입스크립트로 되어있음을 주목, class와 emotion을 접합시켜보려 했는데,
