@@ -1,5 +1,5 @@
 // common type definition
 
-export interface CssProp {
+export interface State {
   [key: string]: any;
 }
