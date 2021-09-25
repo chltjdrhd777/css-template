@@ -1,10 +1,10 @@
 import React from "react";
 import { css } from "@emotion/css";
-import { CssProp } from "type";
+import { State } from "type";
 import classNames from "classnames";
 
 class CSSMaker {
-  static readonly masterMain = (props?: CssProp) => css``;
+  static readonly masterMain = (props?: State) => css``;
 }
 
 const { masterMain } = CSSMaker;
